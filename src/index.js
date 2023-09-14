@@ -44,8 +44,8 @@ hours.innerHTML = now.getHours().toString();
 minutes.innerHTML = now.getMinutes().toString();
 
 const cityInputForm = document.getElementById("city-input-form");
-const sityName = document.getElementById("sity-name");
-sityName.innerHTML = "Sydney";
+const cityName = document.getElementById("city-name");
+cityName.innerHTML = "Sydney";
 
 cityInputForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -58,7 +58,7 @@ cityInputForm.addEventListener("submit", function (event) {
     .then(function (response) {
       // handle success
       const tempInCity = response.data.main.temp;
-      sityName.innerHTML = cityInput.value;
+      cityName.innerHTML = cityInput.value;
       tempShow = tempInCity.toFixed(0).toString();
       tempValue.innerHTML = tempShow;
       defoultTempType = true;
@@ -67,7 +67,7 @@ cityInputForm.addEventListener("submit", function (event) {
     .catch(function (error) {
       // handle error
       console.log(error);
-      sityName.innerHTML = "City is not correct";
+      cityName.innerHTML = "City is not correct";
       cityInputForm.reset();
     });
 });
@@ -85,7 +85,7 @@ function handlePosition(position) {
       const curentTemp = response.data.main.temp;
       const curentCity = response.data.name;
 
-      sityName.innerHTML = curentCity;
+      cityName.innerHTML = curentCity;
       tempShow = curentTemp.toFixed(0).toString();
       tempValue.innerHTML = tempShow;
       defoultTempType = true;

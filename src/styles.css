@@ -1,23 +1,27 @@
-body {
-  font-family: sans-serif;
-  padding: 0 20px;
+.сity {
+  font-size: 30px;
+  font-weight: 600;
+}
+.emoji,
+.temp-value {
+  font-size: 48px;
+}
+.temp-type {
+  color: #007bff;
+  font-size: 18px;
+  padding-top: 14px;
+}
+.poin {
+  cursor: pointer;
+}
+.main-block {
+  padding-left: 12rem;
+  padding-right: 12rem;
 }
 
-h1 {
+.footer {
+  position: absolute;
+  bottom: 5rem;
+  right: 50%;
   text-align: center;
-  font-weight: 900;
-  margin: 0;
-  font-size: 34px;
-  line-height: 48px;
-}
-
-h1 h2,
-h3 {
-  color: #231d3c;
-}
-
-.logo {
-  display: block;
-  margin: 30px auto;
-  width: 150px;
 }
